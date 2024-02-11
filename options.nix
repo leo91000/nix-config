@@ -3,54 +3,53 @@
 # https://gitlab.com/Zaney/zaneyos/-/wikis/Setting-Options
 
 let
-  # THINGS YOU NEED TO CHANGE
-  username = "zaney";
-  hostname = "hyprnix";
+  username = "leoc";
+  hostname = "nixos";
   userHome = "/home/${username}";
-  flakeDir = "${userHome}/zaneyos";
-  waybarStyle = "simplebar"; # simplebar, slickbar, or default
+  flakeDir = "${userHome}/nixos";
+  waybarStyle = "slickbar"; # simplebar, slickbar, or default
 in {
   # User Variables
-  username = "zaney";
-  hostname = "hyprnix";
-  gitUsername = "Tyler Kelley";
-  gitEmail = "tylerzanekelley@gmail.com";
-  theme = "atelier-cave";
+  username = "${username}";
+  hostname = "${hostname}";
+  gitUsername = "Léo Coletta";
+  gitEmail = "mail.leo.coletta@gmail.com";
+  theme = "tokyo-night-storm";
   slickbar = if waybarStyle == "slickbar" then true else false;
   simplebar = if waybarStyle == "simplebar" then true else false;
   bar-number = true; # Enable / Disable Workspace Numbers In Waybar
   borderAnim = true;
   browser = "firefox";
-  wallpaperGit = "https://gitlab.com/Zaney/my-wallpapers.git"; # This will give you my wallpapers
+  wallpaperGit = "https://github.com/leo91000/wallpapers.git"; # This will give you my wallpapers
   # ^ (use as is or replace with your own repo - removing will break the wallsetter script) 
   wallpaperDir = "${userHome}/Pictures/Wallpapers";
   screenshotDir = "${userHome}/Pictures/Screenshots";
   flakeDir = "${flakeDir}";
-  flakePrev = "${userHome}/.zaneyos-previous";
-  flakeBackup = "${userHome}/.zaneyos-backup";
-  terminal = "kitty"; # This sets the terminal that is used by the hyprland terminal keybinding
+  flakePrev = "${userHome}/.nixos-previous";
+  flakeBackup = "${userHome}/.nixos-backup";
+  terminal = "alacritty"; # This sets the terminal that is used by the hyprland terminal keybinding
 
   # System Settings
-  clock24h = false;
-  theLocale = "en_US.UTF-8";
-  theKBDLayout = "us";
-  theSecondKBDLayout = "de";
+  clock24h = true;
+  theLocale = "fr_FR.UTF-8";
+  theKBDLayout = "fr";
+  theSecondKBDLayout = "us";
   theKBDVariant = "";
-  theLCVariables = "en_US.UTF-8";
-  theTimezone = "America/Chicago";
-  theShell = "bash"; # Possible options: bash, zsh
-  theKernel = "zen"; # Possible options: default, latest, lqx, xanmod, zen
+  theLCVariables = "fr_FR.UTF-8";
+  theTimezone = "Europe/Paris";
+  theShell = "zsh"; # Possible options: bash, zsh
+  theKernel = "default"; # Possible options: default, latest, lqx, xanmod, zen
   sdl-videodriver = "x11"; # Either x11 or wayland ONLY. Games might require x11 set here
   # For Hybrid Systems intel-nvidia
   # Should Be Used As gpuType
   cpuType = "intel";
-  gpuType = "amd";
+  gpuType = "intel-nvidia";
 
   # Nvidia Hybrid Devices
   # ONLY NEEDED FOR HYBRID
   # SYSTEMS! 
   intel-bus-id = "PCI:0:2:0";
-  nvidia-bus-id = "PCI:14:0:0";
+  nvidia-bus-id = "PCI:1:0:0";
 
   # Enable / Setup NFS
   nfs = false;
@@ -62,7 +61,7 @@ in {
   localHWClock = false;
 
   # Enable Printer & Scanner Support
-  printer = false;
+  printer = true;
 
   # Enable Flatpak & Larger Programs
   distrobox = false;
@@ -77,11 +76,11 @@ in {
   # Enable Terminals
   # If You Disable All You Get Kitty
   wezterm = false;
-  alacritty = false;
-  kitty = true;
+  alacritty = true;
+  kitty = false;
 
   # Enable Python & PyCharm
-  python = false;
+  python = true;
   
   # Enable SyncThing
   syncthing = false;

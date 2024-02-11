@@ -42,10 +42,10 @@ in {
     mutableUsers = true;
     users."${username}" = {
       homeMode = "755";
-      hashedPassword = "$6$YdPBODxytqUWXCYL$AHW1U9C6Qqkf6PZJI54jxFcPVm2sm/XWq3Z1qa94PFYz0FF.za9gl5WZL/z/g4nFLQ94SSEzMg5GMzMjJ6Vd7.";
+      hashedPassword = "$6$wcumm1iTFAPsDIvn$OkWC81VAAjhFexUF2qexqOA5JEfPUrdZVJWWKlBniSdOWgaGkQRGmcN5d9/ofSNB./Ep8LUdy.LOzmOT.MU47.";
       isNormalUser = true;
       description = "${gitUsername}";
-      extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
+      extraGroups = [ "networkmanager" "wheel" "libvirtd" "docker" ];
       shell = pkgs.${theShell};
       ignoreShellProgramCheck = true;
       packages = with pkgs; [];

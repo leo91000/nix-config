@@ -6,11 +6,50 @@ let
 in {
   # Install Packages For The User
   home.packages = with pkgs; [
-    pkgs."${browser}" discord libvirt swww grim slurp gnome.file-roller
-    swaynotificationcenter rofi-wayland imv transmission-gtk mpv
-    gimp obs-studio rustup audacity pavucontrol tree
-    font-awesome spotify swayidle neovide element-desktop swaylock
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    pkgs."${browser}" 
+    discord 
+    libvirt 
+    swww 
+    grim 
+    slurp 
+    gnome.file-roller
+    swaynotificationcenter 
+    rofi-wayland 
+    imv 
+    transmission-gtk 
+    mpv
+    gimp 
+    obs-studio 
+    rustup 
+    xclip
+    audacity 
+    pavucontrol
+    tree
+    font-awesome 
+    spotify 
+    swayidle 
+    neovide 
+    element-desktop 
+    swaylock
+    nerdfonts
+    gh
+    lazygit
+    ripgrep
+    bottom
+    fd
+    bat
+    gdu
+    docker
+    docker-compose
+    podman
+    podman-compose
+    just
+    unzip
+    jetbrains.datagrip
+    google-chrome
+    gitoxide
+    dart-sass
+    zig
     # Import Scripts
     (import ./../scripts/emopicker9000.nix { inherit pkgs; })
     (import ./../scripts/task-waybar.nix { inherit pkgs; })
@@ -27,4 +66,5 @@ in {
   ];
 
   programs.gh.enable = true;
+
 }

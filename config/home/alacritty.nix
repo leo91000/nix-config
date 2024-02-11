@@ -8,12 +8,12 @@ in lib.mkIf (alacritty == true) {
     enable = true;
     settings = {
       window = {
-	padding.x = 15;
-	padding.y = 15;
+	padding.x = 4;
+	padding.y = 0;
 	decorations = "none";
 	startup_mode = "Windowed";
 	dynamic_title = true;
-	opacity = 0.6;
+	opacity = 0.85;
       };
       cursor = {
 	style = {
@@ -31,34 +31,29 @@ in lib.mkIf (alacritty == true) {
       };
       colors = {
 	bright = {
-	  black = "0x${palette.base00}";
-	  blue = "0x${palette.base0D}";
-	  cyan = "0x${palette.base0C}";
-	  green = "0x${palette.base0B}";
-	  magenta = "0x${palette.base0E}";
-	  red = "0x${palette.base08}";
-	  white = "0x${palette.base06}";
-	  yellow = "0x${palette.base09}";
-	};
-	cursor = {
-	  cursor = "0x${palette.base06}";
-	  text = "0x${palette.base06}";
+	  black = "#444b6a";
+	  red = "#ff7a93";
+	  green = "#b9f27c";
+	  yellow = "#ff9e64";
+	  blue = "#7da6ff";
+	  magenta = "#bb9af7";
+	  cyan = "#0db9d7";
+	  white = "#acb0d0";
 	};
 	normal = {
-	  black = "0x${palette.base00}";
-	  blue = "0x${palette.base0D}";
-	  cyan = "0x${palette.base0C}";
-	  green = "0x${palette.base0B}";
-	  magenta = "0x${palette.base0E}";
-	  red = "0x${palette.base08}";
-	  white = "0x${palette.base06}";
-	  yellow = "0x${palette.base0A}";
+	  black = "#32344a";
+	  red = "#f7768e";
+	  green = "#9ece6a";
+	  yellow = "#e0af68";
+	  blue = "#7aa2f7";
+	  magenta = "#ad8ee6";
+	  cyan = "#449dab";
+	  white = "#787c99";
 	};
 	primary = {
-	  background = "0x${palette.base00}";
-	  foreground = "0x${palette.base06}";
+	  background = "#1a1b26";
+	  foreground = "#a9b1d6";
 	};
-	draw_bold_text_with_bright_colors = true;
       };
     };
   };

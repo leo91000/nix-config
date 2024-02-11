@@ -21,6 +21,12 @@ in with lib; {
       modifier = "SUPER";
     in concatStrings [ ''
       monitor=,preferred,auto,1
+
+      # PC Fixe 3 monitor setup
+      # monitor=HDMI-A-1,2560x1440@240.00,5120x0,1.0
+      # monitor=DP-1,2560x1440@144.00,0x0,1.0
+      # monitor=DP-3,2560x1440@240.00,2560x0,1.0
+
       windowrule = fullscreen, ^(wlogout)$
       windowrule = animation fade,^(wlogout)$
       general {
@@ -134,8 +140,8 @@ in with lib; {
       ''}
       bind = ${modifier},E,exec,emopicker9000
       bind = ${modifier},S,exec,screenshootin
-      bind = ${modifier},D,exec,discord
-      bind = ${modifier},O,exec,obs
+      bind = ${modifier},D,exec,discord --use-angle=opengles
+      bind = ${modifier},O,exec,obsidian --use-angle=opengles
       bind = ${modifier},G,exec,gimp
       bind = ${modifier}SHIFT,G,exec,godot4
       bind = ${modifier},T,exec,thunar

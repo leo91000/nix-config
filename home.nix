@@ -32,6 +32,12 @@ in {
     enable = true;
     userName = "${gitUsername}";
     userEmail = "${gitEmail}";
+    extraConfig = {
+      pull.rebase = "true";
+      push.autoSetupRemote = "true";
+      commit.gpgsign = "true";
+      init.defaultBranch = "main";
+    };
   };
 
   # Create XDG Dirs

@@ -8,7 +8,7 @@ let
   ];
 in lib.mkIf (python == true) {
   environment.systemPackages = with pkgs; [
-    jetbrains.pycharm-community-bin
+    jetbrains.pycharm-professional
     (pkgs.python3.withPackages my-python-packages)
   ];
 

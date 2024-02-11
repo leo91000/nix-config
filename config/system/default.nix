@@ -1,7 +1,8 @@
-{ config, pkgs, ... }:
+{ config, pkgs, username, ... }:
 
 {
   imports = [
+    ./1password.nix
     ./amd-gpu.nix
     ./appimages.nix
     ./autorun.nix
